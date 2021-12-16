@@ -9,10 +9,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 public class EnergyEfficiency {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver webDriver = new ChromeDriver();
+        webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         webDriver.get("https://www.rockwool.com/ru/");
         webDriver.manage().window().setSize(new Dimension(1000, 800));
         new WebDriverWait(webDriver, 10, 500)
