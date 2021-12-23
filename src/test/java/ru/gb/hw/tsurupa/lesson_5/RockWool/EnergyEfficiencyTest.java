@@ -11,7 +11,7 @@ import java.util.List;
 
 public class EnergyEfficiencyTest extends BasicTest{
     @Test
-    void EnergyEfficiency() {
+    void energyEfficiency() {
         webDriver.manage().window().setSize(new Dimension(1000, 800));
         webDriver.findElement(By.xpath("//button[contains(@class, 'header__menu-btn')]")).click();
 

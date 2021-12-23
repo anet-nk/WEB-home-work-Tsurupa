@@ -11,7 +11,7 @@ import java.util.List;
 
 public class DownloadCatalogTest extends BasicTest {
     @Test
-    void DownloadCatalog() {
+    void downloadCatalog() {
         webDriver.manage().window().setSize(new Dimension(1300, 800));
         webDriver.findElement(By.xpath("//li[contains(@class, 'js-top-nav')]/a[contains(text(), 'Вдохновение')]"))
                 .click();
@@ -37,18 +37,18 @@ public class DownloadCatalogTest extends BasicTest {
         Assertions.assertEquals("Капитальный ремонт и реконструкция",
                 webDriver.findElement(By.xpath("//span[@class='breadcrumb__point']")).getText());
 
-        webDriver.findElement(By.xpath("//a[contains(text(), 'Капитальный ремонт жилого дома')]/../../../../../a")).click();
+        webDriver.findElement(By.xpath("//a[@href='/ru/advice-and-inspiration/renovation/homeowner-renovation/' and @class='card-stretched-link']")).click();
 
         Assertions.assertEquals("Капитальный ремонт жилого дома",
                 webDriver.findElement(By.xpath("//span[@class='breadcrumb__point']")).getText());
 
-        webDriver.findElement(By.xpath("//a[contains(text(), 'Реконструкция мансарды и чердака')]/../../../../../a")).click();
+        webDriver.findElement(By.xpath("//a[contains(@href, 'loft-and-attic-renovation') and  contains(@class, 'card-stretched-link')]")).click();
 
         Assertions.assertEquals("Реконструкция мансарды и чердака",
                 webDriver.findElement(By.xpath("//span[@class='breadcrumb__point']")).getText());
         Assertions.assertEquals("Реконструкция мансарды и чердака",
                 webDriver.findElement(By.xpath("//div[@class='O3-hero-main-image-section-text-section-inner gated-link-container']/h1")).getText());
 
-        webDriver.findElement(By.xpath("//h6[contains(text(), 'Каталог по монтажу скатной кровли')]/../div/a")).click();
+        webDriver.findElement(By.xpath("//a[contains(@href, 'https://p-cdn.rockwool.com/siteassets/rw-ru/inspiration/renovation/ROCKWOOL_DIY_Solutions-for-roof')]")).click();
     }
 }

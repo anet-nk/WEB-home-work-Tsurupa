@@ -14,7 +14,7 @@ import java.util.List;
 
 public class CompareMaterialsTest extends BasicTest {
     @Test
-    void CompareMaterials() {
+    void compareMaterials() {
         webDriver.manage().window().setSize(new Dimension(1300, 800));
         webDriver.findElement(By.xpath("//li[contains(@class, 'js-top-nav')]/a[contains(text(), 'Продукты и конструкции')]"))
                 .click();

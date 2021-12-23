@@ -14,7 +14,7 @@ import java.util.List;
 public class CalculateInsulationTest extends BasicTest {
 
     @Test
-    void CalculateInsulation() {
+    void calculateInsulation() {
         webDriver.manage().window().setSize(new Dimension(1300, 800));
         List<WebElement> headerMenu = webDriver.findElements(By.xpath("//a[@class='has-sub']"));
 
