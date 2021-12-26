@@ -1,18 +1,10 @@
 package ru.gb.hw.tsurupa.lesson_6.RockWool;
 
-import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import ru.gb.hw.tsurupa.lesson6.RockWool.Calculators;
+import ru.gb.hw.tsurupa.lesson6.RockWool.CalculatorsPage;
 import ru.gb.hw.tsurupa.lesson6.RockWool.MenuBar;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CalculateInsulationTest extends BasicTest {
 
@@ -40,9 +32,9 @@ public class CalculateInsulationTest extends BasicTest {
         softAssertions.assertAll();
 
         new MenuBar(webDriver).chooseNextMenuItems("Калькуляторы");
-        Assertions.assertEquals("Калькуляторы", new Calculators(webDriver).getTextBreadcrumbPoint());
+        Assertions.assertEquals("Калькуляторы", new CalculatorsPage(webDriver).getTextBreadcrumbPoint());
 
-        new Calculators(webDriver).clickStartCalculationButton();
+        new CalculatorsPage(webDriver).clickStartCalculationButton();
 
         //Далее не могу отрефакторить тест, т.к. данный функционал проверяемого сайта временно не работает.
 

@@ -5,15 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Facade extends BaseViewRockWool {
-    public Facade(WebDriver webDriver) {
+public class FacadePage extends BaseViewRockWool {
+    public FacadePage(WebDriver webDriver) {
         super(webDriver);
     }
 
     @FindBy(xpath = "//div[@data-link-name='ВЕНТИ БАТТС Д ОПТИМА']/span[text()='Сравнить']")
             public WebElement compareCheckboxVentyBatsDOptoma;
 
-   public Facade compareVentyBatsDOptoma() {
+   public FacadePage compareVentyBatsDOptoma() {
        compareCheckboxVentyBatsDOptoma.click();
        return this;
    }
@@ -21,7 +21,7 @@ public class Facade extends BaseViewRockWool {
     @FindBy(xpath = "//div[@data-link-name='ВЕНТИ БАТТС Д']/span[text()='Сравнить']")
     public WebElement compareCheckboxVentyBatsD;
 
-    public Facade compareVentyBatsD() {
+    public FacadePage compareVentyBatsD() {
         compareCheckboxVentyBatsD.click();
         return this;
     }
@@ -29,12 +29,12 @@ public class Facade extends BaseViewRockWool {
     @FindBy(xpath = "//div[@data-link-name='ВЕНТИ БАТТС Н ОПТИМА']/span[text()='Сравнить']")
     public WebElement compareCheckboxVentyBatsNOptima;
 
-    public Facade compareVentyBatsNOptima() {
+    public FacadePage compareVentyBatsNOptima() {
         compareCheckboxVentyBatsNOptima.click();
         return this;
     }
 
-    public Facade deleteChatWindow() {
+    public FacadePage deleteChatWindow() {
         JavascriptExecutor jsExecuter = (JavascriptExecutor) webDriver;
         jsExecuter.executeScript("var elem = document.getElementById(\"jvlabelWrap\");\n" +
                 "elem.remove();");

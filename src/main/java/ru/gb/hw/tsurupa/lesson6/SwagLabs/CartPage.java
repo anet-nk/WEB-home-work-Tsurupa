@@ -32,8 +32,8 @@ public class CartPage extends BaseViewSwagLabs{
     @FindBy(id = "checkout")
             public WebElement checkoutButton;
 
-    public CheckoutYourInformation clickCheckout() {
+    public CheckoutYourInformationPage clickCheckout() {
         checkoutButton.click();
-        return new CheckoutYourInformation(webDriver);
+        return new CheckoutYourInformationPage(webDriver);
     }
 }

@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ChechoutOverview extends BaseViewSwagLabs{
-    public ChechoutOverview(WebDriver webDriver) {super(webDriver);}
+public class ChechoutOverviewPage extends BaseViewSwagLabs{
+    public ChechoutOverviewPage(WebDriver webDriver) {super(webDriver);}
 
-    public ChechoutOverview assertTitle() {
+    public ChechoutOverviewPage assertTitle() {
         Assertions.assertEquals("CHECKOUT: OVERVIEW", pageTitle.getText());
         return this;
     }
@@ -17,7 +17,7 @@ public class ChechoutOverview extends BaseViewSwagLabs{
     @FindBy(className = "summary_total_label")
     public WebElement totalPrice;
 
-    public ChechoutOverview assertTotalPrice() {
+    public ChechoutOverviewPage assertTotalPrice() {
         Assertions.assertEquals("Total: $43.18", totalPrice.getText());
         return this;
     }
@@ -25,9 +25,9 @@ public class ChechoutOverview extends BaseViewSwagLabs{
     @FindBy(id = "finish")
     public WebElement finishBatton;
 
-    public CheckoutComplete clickFinish() {
+    public CheckoutCompletePage clickFinish() {
         finishBatton.click();
-        return new CheckoutComplete(webDriver);
+        return new CheckoutCompletePage(webDriver);
     }
 
 }

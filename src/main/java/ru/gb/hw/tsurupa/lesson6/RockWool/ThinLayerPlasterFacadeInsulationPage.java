@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ThinLayerPlasterFacadeInsulation extends BaseViewRockWool {
-    public ThinLayerPlasterFacadeInsulation(WebDriver webDriver) {
+public class ThinLayerPlasterFacadeInsulationPage extends BaseViewRockWool {
+    public ThinLayerPlasterFacadeInsulationPage(WebDriver webDriver) {
         super(webDriver);
     }
 

@@ -1,19 +1,18 @@
 package ru.gb.hw.tsurupa.lesson6.SwagLabs;
 
 import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CheckoutYourInformation extends BaseViewSwagLabs{
-    public CheckoutYourInformation(WebDriver webDriver) {super(webDriver);}
+public class CheckoutYourInformationPage extends BaseViewSwagLabs{
+    public CheckoutYourInformationPage(WebDriver webDriver) {super(webDriver);}
     private final Faker faker = new Faker();
 
     @FindBy(id = "first-name")
             public WebElement inputFirstName;
 
-    public CheckoutYourInformation fillFirstName() {
+    public CheckoutYourInformationPage fillFirstName() {
         inputFirstName.sendKeys(faker.funnyName().name());
         return this;
     }
@@ -21,7 +20,7 @@ public class CheckoutYourInformation extends BaseViewSwagLabs{
     @FindBy(id = "last-name")
     public WebElement inputLastName;
 
-    public CheckoutYourInformation fillLastName() {
+    public CheckoutYourInformationPage fillLastName() {
         inputLastName.sendKeys(faker.funnyName().name());
         return this;
     }
@@ -29,7 +28,7 @@ public class CheckoutYourInformation extends BaseViewSwagLabs{
     @FindBy(id = "postal-code")
     public WebElement inputPostalCode;
 
-    public CheckoutYourInformation fillPostalCode() {
+    public CheckoutYourInformationPage fillPostalCode() {
         inputPostalCode.sendKeys("192012");
         return this;
     }
@@ -37,9 +36,9 @@ public class CheckoutYourInformation extends BaseViewSwagLabs{
     @FindBy(id = "continue")
     public WebElement continueBatton;
 
-    public ChechoutOverview clickContinue() {
+    public ChechoutOverviewPage clickContinue() {
         continueBatton.click();
-        return new ChechoutOverview(webDriver);
+        return new ChechoutOverviewPage(webDriver);
     }
 
 }

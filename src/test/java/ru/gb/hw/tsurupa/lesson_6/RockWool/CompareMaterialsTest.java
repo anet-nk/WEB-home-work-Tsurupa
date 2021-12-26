@@ -3,12 +3,11 @@ package ru.gb.hw.tsurupa.lesson_6.RockWool;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import ru.gb.hw.tsurupa.lesson6.RockWool.ComparPage;
-import ru.gb.hw.tsurupa.lesson6.RockWool.Facade;
+import ru.gb.hw.tsurupa.lesson6.RockWool.FacadePage;
 import ru.gb.hw.tsurupa.lesson6.RockWool.MenuBar;
-import ru.gb.hw.tsurupa.lesson6.RockWool.ThinLayerPlasterFacadeInsulation;
+import ru.gb.hw.tsurupa.lesson6.RockWool.ThinLayerPlasterFacadeInsulationPage;
 
 public class CompareMaterialsTest extends BasicTest {
     @Test
@@ -55,12 +54,12 @@ public class CompareMaterialsTest extends BasicTest {
 
         new MenuBar(webDriver).chooseNextMenuItems("Утепление тонкослойного штукатурного фасада");
         Assertions.assertEquals("Утепление тонкослойного штукатурного фасада",
-                new ThinLayerPlasterFacadeInsulation(webDriver).getTextBreadcrumbPoint());
+                new ThinLayerPlasterFacadeInsulationPage(webDriver).getTextBreadcrumbPoint());
 
-        new ThinLayerPlasterFacadeInsulation(webDriver).clickFindProductButton();
-        Assertions.assertEquals("Фасад", new Facade(webDriver).getTextBreadcrumbPoint());
+        new ThinLayerPlasterFacadeInsulationPage(webDriver).clickFindProductButton();
+        Assertions.assertEquals("Фасад", new FacadePage(webDriver).getTextBreadcrumbPoint());
 
-        new Facade(webDriver)
+        new FacadePage(webDriver)
                 .compareVentyBatsDOptoma()
                 .compareVentyBatsD()
                 .compareVentyBatsNOptima()
