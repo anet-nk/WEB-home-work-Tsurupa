@@ -1,5 +1,6 @@
 package ru.gb.hw.tsurupa.lesson6.SwagLabs;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,16 +21,19 @@ public class LoginPage extends BaseViewSwagLabs {
     @FindBy(id = "login-button")
     public WebElement buttonLogin;
 
+    @Step("Ввести логин")
     public LoginPage fillLogon(String login) {
         inputLogin.sendKeys(login);
         return this;
     }
 
+    @Step("Ввести пароль")
     public LoginPage fillPassword(String password) {
         inputPassword.sendKeys(password);
         return this;
     }
 
+    @Step("Нажать кнопку \"Login\"")
     public MainPage submitLogin() {
         buttonLogin.click();
         return new MainPage(webDriver);

@@ -1,5 +1,6 @@
 package ru.gb.hw.tsurupa.lesson_6.RockWool;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -7,10 +8,11 @@ import org.openqa.selenium.Dimension;
 import ru.gb.hw.tsurupa.lesson6.RockWool.EnergyEfficiencyInConstructionPage;
 import ru.gb.hw.tsurupa.lesson6.RockWool.MenuBarWindowLessThan1200;
 
-
+@DisplayName("Раздел \"О нас\" и скачивание каталога с сайта RockWool")
 public class EnergyEfficiencyTest extends BasicTest {
     @Test
     @DisplayName("Проверка стартового меню ")
+    @Description("Проверяем соответствие содержания меню требованиям")
     void menuWindowLessThan1200Test() {
         webDriver.manage().window().setSize(new Dimension(1000, 800));
         new MenuBarWindowLessThan1200(webDriver).openMenu();
@@ -25,6 +27,7 @@ public class EnergyEfficiencyTest extends BasicTest {
     }
     @Test
     @DisplayName("Проверка меню \"О нас\"")
+    @Description("Проверяем соответствие содержания меню требованиям")
     void menuAboutUsWindowLessThan1200Test() {
         webDriver.manage().window().setSize(new Dimension(1000, 800));
         new MenuBarWindowLessThan1200(webDriver)
@@ -42,6 +45,7 @@ public class EnergyEfficiencyTest extends BasicTest {
     }
     @Test
     @DisplayName("Проверка меню \"Наше видение\"")
+    @Description("Проверяем соответствие содержания меню требованиям")
     void menuOurVisionWindowLessThan1200Test() {
         webDriver.manage().window().setSize(new Dimension(1000, 800));
         new MenuBarWindowLessThan1200(webDriver)
@@ -55,7 +59,8 @@ public class EnergyEfficiencyTest extends BasicTest {
         softAssertions.assertAll();
     }
     @Test
-    @DisplayName("Проверка возможности скачать каталог на странице \"Энергоэффективные проекты\"")
+    @DisplayName("Скачивание каталога")
+    @Description("Проверка возможности скачать каталог на странице \"Энергоэффективные проекты\"")
     void downloadCatalog() {
         webDriver.manage().window().setSize(new Dimension(1000, 800));
         new MenuBarWindowLessThan1200(webDriver)

@@ -1,5 +1,6 @@
 package ru.gb.hw.tsurupa.lesson_6.RockWool;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,10 +10,11 @@ import ru.gb.hw.tsurupa.lesson6.RockWool.Inspiration.MajorRenovationOfResidentia
 import ru.gb.hw.tsurupa.lesson6.RockWool.Inspiration.MajorRepairsAndReconstruction;
 import ru.gb.hw.tsurupa.lesson6.RockWool.MenuBar;
 
-
+@DisplayName("Раздел Вдохновение и скачивание каталога с сайта RockWool")
 public class DownloadCatalogTest extends BasicTest {
     @Test
     @DisplayName("Проверка меню \"Вдохновение\"")
+    @Description("Проверяем соответствие содержания меню требованиям")
     void menuInspirationTest() {
         webDriver.manage().window().setSize(new Dimension(1300, 800));
 
@@ -55,7 +57,8 @@ public class DownloadCatalogTest extends BasicTest {
                 new AtticReconstruction(webDriver).getTextPageTitle());
     }
     @Test
-    @DisplayName("Проверка скачивания каталога по монтажу скатной кровли")
+    @DisplayName("Скачивание каталога")
+    @Description("Проверка скачивания каталога по монтажу скатной кровли")
     void downloadCatalog() {
         webDriver.manage().window().setSize(new Dimension(1300, 800));
 

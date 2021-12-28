@@ -1,5 +1,6 @@
 package ru.gb.hw.tsurupa.lesson6.RockWool;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,12 +18,12 @@ public class MenuBar extends BaseViewRockWool {
     @FindBy(xpath = "//ul[contains(@class, 'O1-1-header__nav__list js-nav__list O1-1-header__nav__sub js-nav__sub   is-open')]/*/a")
     public static List<WebElement> menuNextLevel;
 
-
+    @Step("открыть меню {0}")
     public MenuBar openMenuBarItems(String itemName) {
         getElement(menuBarItems, itemName);
         return this;
     }
-
+    @Step("выбрать раздел меню {0}")
     public MenuBar chooseNextMenuItems(String itemName) {
         getElement(menuNextLevel, itemName);
         return this;

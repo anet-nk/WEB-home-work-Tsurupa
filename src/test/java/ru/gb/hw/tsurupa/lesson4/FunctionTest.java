@@ -59,7 +59,6 @@ public class FunctionTest {
     void testCat(Cat cat, boolean result) {
         System.out.println(cat);
         System.out.println(result);
-
     }
 
     private static Stream<Arguments> catsDataProvider(){// Метод, который предоставляет (генерирует) тестовые данные.

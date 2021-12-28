@@ -1,5 +1,6 @@
 package ru.gb.hw.tsurupa.lesson_6.RockWool;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,9 +10,11 @@ import ru.gb.hw.tsurupa.lesson6.RockWool.FacadePage;
 import ru.gb.hw.tsurupa.lesson6.RockWool.MenuBar;
 import ru.gb.hw.tsurupa.lesson6.RockWool.ThinLayerPlasterFacadeInsulationPage;
 
+@DisplayName("Раздел \"Продукты и конструкции\"")
 public class CompareMaterialsTest extends BasicTest {
     @Test
     @DisplayName("Проверка меню \"Продукты и конструкции\"")
+    @Description("Проверяем соответствие содержания меню \"Продукты и конструкции\" требованиям")
     void productsAndDesignsMenuTest() {
         webDriver.manage().window().setSize(new Dimension(1300, 800));
         new MenuBar(webDriver).openMenuBarItems("Продукты и конструкции");
@@ -35,6 +38,8 @@ public class CompareMaterialsTest extends BasicTest {
     }
 
     @Test
+    @DisplayName("Сравнение продукции из каменной ваты")
+    @Description("Проверяем как работает функция сравнения материалов")
     void compareMaterials() {
         webDriver.manage().window().setSize(new Dimension(1300, 800));
         new MenuBar(webDriver)

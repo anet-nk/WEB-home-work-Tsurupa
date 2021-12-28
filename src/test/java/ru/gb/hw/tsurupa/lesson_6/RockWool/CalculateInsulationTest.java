@@ -1,15 +1,26 @@
 package ru.gb.hw.tsurupa.lesson_6.RockWool;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import ru.gb.hw.tsurupa.lesson6.RockWool.CalculatorsPage;
 import ru.gb.hw.tsurupa.lesson6.RockWool.MenuBar;
+import java.util.ArrayList;
+import java.util.List;
 
+@DisplayName("Проверка калькулятора расчета толщины утеплителя")
 public class CalculateInsulationTest extends BasicTest {
 
     @Test
-    void calculateInsulation() throws InterruptedException {
+    @DisplayName("Проверка меню \"Библиотека\"")
+    @Description("Проверяем соответствие содержания меню требованиям")
+    void calculateInsulation() {
         webDriver.manage().window().setSize(new Dimension(1300, 800));
         new MenuBar(webDriver);
         softAssertions.assertThat(MenuBar.menuBarItems.get(0).getText()).isEqualTo("Продукты и конструкции");

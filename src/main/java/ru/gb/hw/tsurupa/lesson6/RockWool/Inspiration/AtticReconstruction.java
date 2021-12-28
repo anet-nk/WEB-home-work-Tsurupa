@@ -1,5 +1,6 @@
 package ru.gb.hw.tsurupa.lesson6.RockWool.Inspiration;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +15,8 @@ public class AtticReconstruction extends BaseViewRockWool {
     @FindBy(xpath = "//a[contains(@href, 'https://p-cdn.rockwool.com/siteassets/rw-ru/inspiration/renovation/ROCKWOOL_DIY_Solutions-for-roof')]")
     public WebElement downloadCatalog;
 
+
+    @Step("Скачать каталог по монтажу скатной кровли ")
     public void downloadCatalog() {
         downloadCatalog.click();
     }

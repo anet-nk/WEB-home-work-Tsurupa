@@ -1,6 +1,5 @@
 package ru.gb.hw.tsurupa.lesson6.RockWool;
 
-import com.sun.deploy.security.WIExplorerBrowserAuthenticator14;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

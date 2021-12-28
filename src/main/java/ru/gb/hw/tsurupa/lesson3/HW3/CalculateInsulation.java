@@ -1,4 +1,4 @@
-package ru.gb.hw.tsurupa.lesson_3.HW3;
+package ru.gb.hw.tsurupa.lesson3.HW3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

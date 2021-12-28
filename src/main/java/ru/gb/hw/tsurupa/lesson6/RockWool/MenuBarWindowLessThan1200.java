@@ -1,5 +1,6 @@
 package ru.gb.hw.tsurupa.lesson6.RockWool;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,16 +21,19 @@ public class MenuBarWindowLessThan1200 extends BaseViewRockWool {
     @FindBy(xpath = "//ul[contains(@class, 'O1-1-header__nav__list js-nav__list O1-1-header__nav__sub js-nav__sub   is-open')]/*/a")
     public static List<WebElement> menuBarNextLevel;
 
+    @Step("открыть основное меню")
     public MenuBarWindowLessThan1200 openMenu() {
         openMenuButton.click();
         return this;
     }
 
+    @Step("открыть меню {0}")
     public MenuBarWindowLessThan1200 chooseMenuBarItem(String itemName) {
         getElement(menuBarItems, itemName);
         return this;
     }
 
+    @Step("выбрать раздел меню {0}")
     public MenuBarWindowLessThan1200 chooseNextMenuItems(String itemName) {
         getElement(menuBarNextLevel, itemName);
         return this;
